@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Family Book</title>
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body style="text-align: center;">
+    <h1>My family book</h1>
+    <img src = "father.jpg" style="width: 280px; height: 350px;" id="Family_member_image">
+    <h4 id = "Family_member_name">Father</h4>
+    <button id="NextButton" onclick="update();">Next</button>
+    <script>
+        var images = [
+            "father.jpg",
+            "Mother.jpg",
+            "Grand father.jpg",
+            "son.jpg"
+        ];
+        var names = [
+            "Father",
+            "Mother",
+            "Grand Father",
+            "Son"
+        ];
+        var i = 0;
+        function update(){
+            i++;
+            var Number_of_family_members_in_array = 3
+            if(i > Number_of_family_members_in_array){
+                i = 0;
+            }
+            var updateimage = images[i];
+            var updatename = names[i];
+            document.getElementById("Family_member_image").src = updateimage;
+            document.getElementById("Family_member_name").innerHTML = updatename;
+        }
+    </script>
+</body>
+</html>
